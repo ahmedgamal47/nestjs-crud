@@ -1,6 +1,5 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
 import { CreateMessageDto } from './dtos/create-message.dto';
-import { MessagesRepository } from './messages.repository';
 import { MessagesService } from './messages.service';
 
 @Controller('messages')
@@ -27,6 +26,7 @@ export class MessagesController {
         return this.messagesService.update(id, body.content);
     }
 
+    @ApiRes
     @Delete('/:id')
     deleteMessage(@Param('id') id: string){
         return this.messagesService.delete(id);

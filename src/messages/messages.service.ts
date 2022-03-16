@@ -1,5 +1,4 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
-import { Message, MessageDocument } from "src/schemas/message.schema";
 import { MessagesRepository } from "./messages.repository";
 
 @Injectable()
