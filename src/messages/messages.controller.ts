@@ -26,7 +26,6 @@ export class MessagesController {
         return this.messagesService.update(id, body.content);
     }
 
-    @ApiRes
     @Delete('/:id')
     deleteMessage(@Param('id') id: string){
         return this.messagesService.delete(id);
